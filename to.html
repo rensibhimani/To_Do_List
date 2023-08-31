@@ -16,51 +16,12 @@
         </div>
         <ul id="list-container"></ul>
         <!-- <li class="checked">Task-1</li>
-        <li class="checked">Task-2</li>
-        <li class="checked">Task-3</li>
+        <li>Task-2</li>
+        <li>Task-3</li>
         <li>Task-4</li> -->
       </div>
     </div>
-    <script>
-      const inputBox = document.getElementById("taskInput");
-      const listContainer = document.getElementById("list-container");
-
-      function addTask() {
-        if (inputBox.value === "") {
-          alert("You must write something!");
-        } else {
-          let li = document.createElement("li");
-          li.innerHTML = inputBox.value;
-          listContainer.appendChild(li);
-          let span = document.createElement("span");
-          span.innerHTML = "\u00d7";
-          li.appendChild(span);
-        }
-        inputBox.value = "";
-        saveData();
-      }
-      listContainer.addEventListener(
-        "click",
-        function (e) {
-          if (e.target.tagName === "LI") {
-            e.target.classList.toggle("checked");
-            saveData();
-          } else if (e.target.tagName === "SPAN") {
-            e.target.parentElement.remove();
-            saveData();
-          }
-        },
-        false
-      );
-
-      function saveData() {
-        localStorage.setItem("data", listContainer.innerHTML);
-      }
-
-      function showTask() {
-        listContainer.innerHTML = localStorage.getItem("data");
-      }
-      showTask();
+    <script src="to.js">
     </script>
   </body>
 </html>
