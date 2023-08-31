@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: cursive;
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    padding: 10px;
+    background:  linear-gradient(95deg, rgb(175, 37, 115), rgb(31, 21, 21));
+    color: rgb(13, 12, 13);
+    /* text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%; */
+}
+
+.todo{
+    width: 100%;
+    max-width: 540px;
+    background:linear-gradient(120deg, rgb(92, 90, 90),rgb(228, 165, 175));
+    margin: 100px auto 20px;
+    padding: 20px 30px 70px;
+    border-radius: 10px;
+}
+.todo h1{
+    color: rgb(7, 61, 51);
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.todo h1 img{
+    width: 27px;
+    margin-left: 15px;
+}
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+ }
+ input{
+    flex: 1; 
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-weight: 14px;
+ }
+ button{
+    border: none;
+    outline: none;
+    padding: 15px 35px;
+    background: rgb(92, 90, 90);
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 30px;
+ }
+li{
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+li::before{
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(clipart150515.png);
+    background-position: center;
+    background-size: cover;
+    top: 12px;
+    left: 8px;
+}
+li.checked{
+    color: #555;
+    text-decoration: line-through;
+}
+li.checked::before{
+    background-image: url(checked_190411.png);
+}
+li span{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+li span:hover{
+    background: #514848;
+}
